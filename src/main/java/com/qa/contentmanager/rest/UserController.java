@@ -18,7 +18,7 @@ public class UserController {
     }
 
     //specifically used for read functionality/ browsers only able to work with getmapping
-    @GetMapping("/")
+    @GetMapping("/user")
     public List<User> getAllUser(){
         return this.userService.readAllUser();
     }

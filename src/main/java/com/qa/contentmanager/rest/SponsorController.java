@@ -17,7 +17,7 @@ public class SponsorController {
         this.sponsorService = sponsorService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/sponsor")
     public List<Sponsor> getAllSponsor(){
         return this.sponsorService.readAllSponsor();
     }
