@@ -30,4 +30,17 @@ public class Content {
     @Column
     private String sponsored;
 
+    public Content() {
+    }
+
+    public Content(String title, String contentType, String platform, String status, String postDate, String sponsored) {
+        this.title = title;
+        this.contentType = contentType;
+        this.platform = platform;
+        this.status = status;
+        this.postDate = postDate;
+        this.sponsored = sponsored;
+    }
+
+
 }
