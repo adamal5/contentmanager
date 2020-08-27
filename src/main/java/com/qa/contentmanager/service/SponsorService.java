@@ -1,7 +1,6 @@
 package com.qa.contentmanager.service;
 
 import com.qa.contentmanager.domain.Sponsor;
-import com.qa.contentmanager.exceptions.ContentNotFoundException;
 import com.qa.contentmanager.exceptions.SponsorNotFoundException;
 import com.qa.contentmanager.repo.SponsorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
