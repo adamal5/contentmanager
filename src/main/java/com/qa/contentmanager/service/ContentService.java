@@ -40,7 +40,7 @@ public class ContentService {
         update.setContentType(content.getContentType());
         update.setPlatform(content.getPlatform());
         update.setStatus(content.getStatus());
-        update.setSponsored(content.getSponsored());
+        update.setSponsor(content.getSponsor());
         update.setPostDate(content.getPostDate());
         return this.repo.save(update);
     }

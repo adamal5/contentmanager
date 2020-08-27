@@ -28,18 +28,18 @@ public class Content {
     private String postDate;
 
     @Column
-    private String sponsored;
+    private String sponsor;
 
     public Content() {
     }
 
-    public Content(String title, String contentType, String platform, String status, String postDate, String sponsored) {
+    public Content(String title, String contentType, String platform, String status, String postDate, String sponsor) {
         this.title = title;
         this.contentType = contentType;
         this.platform = platform;
         this.status = status;
         this.postDate = postDate;
-        this.sponsored = sponsored;
+        this.sponsor = sponsor;
     }
     public String getTitle() {
         return title;
@@ -81,12 +81,12 @@ public class Content {
         this.postDate = postDate;
     }
 
-    public String getSponsored() {
-        return sponsored;
+    public String getSponsor() {
+        return sponsor;
     }
 
-    public void setSponsored(String sponsored) {
-        this.sponsored = sponsored;
+    public void setSponsor(String sponsor) {
+        this.sponsor = sponsor;
     }
 
 }
