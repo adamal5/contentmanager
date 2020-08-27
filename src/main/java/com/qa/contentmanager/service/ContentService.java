@@ -32,4 +32,25 @@ public class ContentService {
     public Content findContentById(Long id) {
         return this.repo.findById(id).orElseThrow(ContentNotFoundException::new);
     }
+
+    //update content by id
+    public Content updateContent(Long id, Content content){
+        Content update = findContentById(id);
+        update.setTitle(content.getTitle());
+        update.setContentType(content.getContentType());
+        update.setPlatform(content.getPlatform());
+        update.setStatus(content.getStatus());
+        update.setSponsored(content.getSponsored());
+        update.setPostDate(content.getPostDate());
+        return this.repo.save(update);
+    }
+
+    public boolean deleteContentById(Long id){
+        if(!this.repo.existsById(id)){
+            throw new ContentNotFoundException();
+        }
+        this.repo.deleteById(id);
+        return this.repo.existsById(id);
+    }
+
 }
