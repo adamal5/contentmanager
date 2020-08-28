@@ -38,6 +38,14 @@ public class User {
         this.password = password;
     }
 
+    public Long getUserID() {
+        return userID;
+    }
+
+    public void setUserID(Long userID) {
+        this.userID = userID;
+    }
+
     public String getFirstName() {
         return firstName;
     }

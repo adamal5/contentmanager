@@ -41,6 +41,15 @@ public class Content {
         this.postDate = postDate;
         this.sponsor = sponsor;
     }
+
+    public Long getContentID() {
+        return contentID;
+    }
+
+    public void setContentID(Long contentID) {
+        this.contentID = contentID;
+    }
+
     public String getTitle() {
         return title;
     }

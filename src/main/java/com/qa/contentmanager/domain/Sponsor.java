@@ -38,6 +38,14 @@ public class Sponsor {
         this.notes = notes;
     }
 
+    public Long getSponsorID() {
+        return SponsorID;
+    }
+
+    public void setSponsorID(Long sponsorID) {
+        SponsorID = sponsorID;
+    }
+
     public String getCompanyName() {
         return companyName;
     }
