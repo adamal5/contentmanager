@@ -1,9 +1,6 @@
 package com.qa.contentmanager.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Content {
@@ -30,16 +27,23 @@ public class Content {
     @Column
     private String sponsor;
 
+    @Column
+    private String notes;
+
+    @ManyToOne(targetEntity = User.class)
+    private User user;
+
     public Content() {
     }
 
-    public Content(String title, String contentType, String platform, String status, String postDate, String sponsor) {
+    public Content(String title, String contentType, String platform, String status, String postDate, String sponsor, String notes) {
         this.title = title;
         this.contentType = contentType;
         this.platform = platform;
         this.status = status;
         this.postDate = postDate;
         this.sponsor = sponsor;
+        this.notes = notes;
     }
 
     public Long getContentID() {
@@ -98,4 +102,15 @@ public class Content {
         this.sponsor = sponsor;
     }
 
+    public String getNotes() { return notes; }
+
+    public void setNotes(String notes) { this.notes = notes; }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
