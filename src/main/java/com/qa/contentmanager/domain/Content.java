@@ -12,7 +12,7 @@ public class Content {
     @GeneratedValue
     private Long contentID;
 
-    @Column
+    @Column (nullable = false, unique = true)
     private String title;
 
     @Column
