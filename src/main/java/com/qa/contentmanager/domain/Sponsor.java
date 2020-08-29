@@ -1,10 +1,13 @@
 package com.qa.contentmanager.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "content"})
 public class Sponsor {
 
     @Id
@@ -26,7 +29,7 @@ public class Sponsor {
     @Column
     private String notes;
 
-    @OneToMany(mappedBy = "sponsor", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "sponsor", fetch = FetchType.EAGER)
     private List<Content> content = new ArrayList<>();
 
 
