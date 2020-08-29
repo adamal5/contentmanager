@@ -2,11 +2,6 @@ package com.qa.contentmanager.dto;
 
 import com.qa.contentmanager.domain.Sponsor;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
 public class ContentDTO {
 
 
@@ -23,6 +18,7 @@ public class ContentDTO {
     }
 
     public ContentDTO(String title, String contentType, String platform, String status, String postDate, String sponsor, String notes) {
+        super();
         this.title = title;
         this.contentType = contentType;
         this.platform = platform;
