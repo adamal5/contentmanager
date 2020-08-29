@@ -1,8 +1,11 @@
 package com.qa.contentmanager.rest;
 
 import com.qa.contentmanager.domain.Sponsor;
+import com.qa.contentmanager.dto.SponsorDTO;
 import com.qa.contentmanager.service.SponsorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,28 +21,30 @@ public class SponsorController {
     }
 
     @GetMapping("/sponsor")
-    public List<Sponsor> getAllSponsor(){
-        return this.sponsorService.readAllSponsor();
+    public ResponseEntity<List<SponsorDTO>> getAllSponsor(){
+        return ResponseEntity.ok(this.sponsorService.readAllSponsor());
     }
 
     @PostMapping("/createSponsor")
-    public Sponsor createSponsor(@RequestBody Sponsor sponsor){
-        return this.sponsorService.createSponsor(sponsor);
+    public ResponseEntity<SponsorDTO> createSponsor(@RequestBody Sponsor sponsor){
+        return new ResponseEntity<SponsorDTO>(this.sponsorService.createSponsor(sponsor),HttpStatus.CREATED);
     }
 
     @DeleteMapping("/deleteSponsor/{id}")
-    public Boolean deleteSponsor(@PathVariable Long id){
-        return this.sponsorService.deleteSponsorById(id);
+    public ResponseEntity<?> deleteSponsor(@PathVariable Long id){
+        return this.sponsorService.deleteSponsorById(id)
+                ? ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()
+                : ResponseEntity.noContent().build();
     }
 
     @GetMapping("/getSponsorById/{id}")
-    public Sponsor getSponsorById(@PathVariable Long id){
-        return this.sponsorService.findSponsorById(id);
+    public ResponseEntity <SponsorDTO> getSponsorById(@PathVariable Long id){
+        return ResponseEntity.ok(this.sponsorService.findSponsorById(id));
     }
 
     @PutMapping("/updateSponsor/{id}")
-    public Sponsor updateSponsor(@PathVariable Long id, @RequestBody Sponsor sponsor){
-        return this.sponsorService.updateSponsor(id, sponsor);
+    public ResponseEntity <SponsorDTO> updateSponsor(@PathVariable Long id, @RequestBody Sponsor sponsor){
+        return ResponseEntity.ok(this.sponsorService.updateSponsor(id, sponsor));
     }
 
 }
