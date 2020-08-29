@@ -94,5 +94,7 @@ public class Content {
 
     public void setNotes(String notes) { this.notes = notes; }
 
+    public Sponsor getSponsor() { return sponsor; }
 
+    public void setSponsor(Sponsor sponsor) { this.sponsor = sponsor; }
 }
