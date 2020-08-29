@@ -25,13 +25,10 @@ public class Content {
     private String postDate;
 
     @Column
-    private String sponsor;
-
-    @Column
     private String notes;
 
-    @ManyToOne(targetEntity = User.class)
-    private User user;
+    @ManyToOne(targetEntity = Sponsor.class)
+    private Sponsor sponsor;
 
     public Content() {
     }
@@ -42,7 +39,6 @@ public class Content {
         this.platform = platform;
         this.status = status;
         this.postDate = postDate;
-        this.sponsor = sponsor;
         this.notes = notes;
     }
 
@@ -94,23 +90,9 @@ public class Content {
         this.postDate = postDate;
     }
 
-    public String getSponsor() {
-        return sponsor;
-    }
-
-    public void setSponsor(String sponsor) {
-        this.sponsor = sponsor;
-    }
-
     public String getNotes() { return notes; }
 
     public void setNotes(String notes) { this.notes = notes; }
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 }
