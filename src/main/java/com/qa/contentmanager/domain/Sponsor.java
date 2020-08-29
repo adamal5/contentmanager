@@ -1,9 +1,8 @@
 package com.qa.contentmanager.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Sponsor {
@@ -26,6 +25,9 @@ public class Sponsor {
 
     @Column
     private String notes;
+
+    @OneToMany(mappedBy = "sponsor", fetch = FetchType.LAZY)
+    private List<Content> content = new ArrayList<>();
 
 
     public Sponsor(){}
@@ -85,4 +87,8 @@ public class Sponsor {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public List<Content> getContent() { return content; }
+
+    public void setContent(List<Content> content) { this.content = content; }
 }
