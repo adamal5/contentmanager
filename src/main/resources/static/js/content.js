@@ -70,5 +70,5 @@ function submitContent(){
         }
     };
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify({ companyName: obj.companyName, primaryContactName: obj.primaryContactName, primaryContactEmail: obj.primaryContactEmail, primaryContactPhone: obj.primaryContactPhone,notes: obj.notes, sponsor:{ sponsorID: Number(obj.sponsorID)} }));
+    req.send(JSON.stringify({ title: obj.title, contentType: obj.contentType, platform: obj.platform, status: obj.status, postDate: obj.postDate, notes: obj.notes, content:{ contentID: Number(obj.contentID)} }));
 }
