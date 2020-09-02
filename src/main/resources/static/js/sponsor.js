@@ -36,7 +36,7 @@ function displaySponsors(){
 
                         title.textContent = "Title: " + content.title;
                         status.textContent = "Status: " + content.status;
-                        postDate.textContent = "Post Date" + content.postDate;
+                        postDate.textContent = "Post Date: " + content.postDate;
 
                         elem.appendChild(title);
                         elem.appendChild(status);
