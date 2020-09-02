@@ -1,7 +1,5 @@
 package com.qa.contentmanager.dto;
 
-import com.qa.contentmanager.domain.Sponsor;
-
 public class ContentDTO {
 
 
@@ -12,7 +10,6 @@ public class ContentDTO {
     private String status;
     private String postDate;
     private String notes;
-    private Sponsor sponsor;
 
     public ContentDTO() {
     }
@@ -79,7 +76,4 @@ public class ContentDTO {
 
     public void setNotes(String notes) { this.notes = notes; }
 
-    public Sponsor getSponsor() { return sponsor; }
-
-    public void setSponsor(Sponsor sponsor) { this.sponsor = sponsor; }
 }
