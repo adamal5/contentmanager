@@ -1,8 +1,5 @@
 package com.qa.contentmanager.dto;
 
-import com.qa.contentmanager.domain.Content;
-
-import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +11,7 @@ public class SponsorDTO {
     private String primaryContactEmail;
     private String primaryContactPhone;
     private String notes;
-    private List<Content> content = new ArrayList<>();
+    private List<ContentDTO> content = new ArrayList<>();
 
 
     public SponsorDTO(){}
@@ -76,7 +73,7 @@ public class SponsorDTO {
         this.notes = notes;
     }
 
-    public List<Content> getContent() { return content; }
+    public List<ContentDTO> getContent() { return content; }
 
-    public void setContent(List<Content> content) { this.content = content; }
+    public void setContent(List<ContentDTO> content) { this.content = content; }
 }
