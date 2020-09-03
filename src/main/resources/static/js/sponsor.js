@@ -53,7 +53,7 @@ function displaySponsors(){
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://localhost:8080/getAllNoteBooks");
+    req.open("GET", "http://localhost:8080/sponsor");
     req.send();
 }
 
@@ -66,7 +66,7 @@ function submitSponsor(){
     }
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8080/createNote");
+    req.open("POST", "http://localhost:8080/createSponsor");
     req.onload = () => {
         if (req.status === 200 && req.readyState == 4) {
             console.log("Server Responded with: " + req.responseText);
@@ -75,5 +75,29 @@ function submitSponsor(){
         }
     };
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    req.send(JSON.stringify({ companyName: obj.companyName, primaryContactName: obj.primaryContactName, primaryContactEmail: obj.primaryContactEmail, primaryContactPhone: obj.primaryContactPhone,notes: obj.notes, sponsor:{ sponsorID: Number(obj.sponsorID)} }));
+    req.send(JSON.stringify({ companyName: obj.companyName, primaryContactName: obj.primaryContactName, primaryContactEmail: obj.primaryContactEmail, primaryContactPhone: obj.primaryContactPhone,notes: obj.notes, content:{ contentID: Number(obj.contentID)} }));
 }
+
+//ATTEMPT AT UPDATE FUNCTION
+
+/*
+function updateSponsor(sponsorID) {
+    sponsorID.forEach( function( sponsor ) {
+        updateToSponsor( sponsor.companyName, sponsor.primaryContactName, sponsor.primaryContactEmail, sponsor.primaryContactPhone, sponsor.notes ); // update database
+    });
+
+    function updateToSponsor(companyName, primaryContactName, primaryContactEmail, primaryContactPhone, notes){
+
+    }
+
+    const req = new XMLHttpRequest();
+    req.open("PUT", "http://localhost:8080/updateSponsor/{id}");
+    req.onload = () => {
+        if (req.status === 200 && req.readyState == 4) {
+            console.log("Server Responded with: " + req.responseText);
+        } else {
+            console.log("Oops...");
+        }
+    };
+    
+}*/
