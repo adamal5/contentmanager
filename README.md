@@ -58,19 +58,13 @@ This application is designed to allow users to store manage their social media c
 **Functionality:**
 
 The Application allows users to do the following :
-* Create a user account in order to store and retrieve personal content (CREATE)
-  * Username 
-  * First Name
-  * Last Name
-  * Email
-  * Password 
 * Enter data on indiviual posts with the folllowing details (CREATE)
   * Title of the Post **_e.g Scholarship Announcement_**
   * Content Type **_e.g Infographic_**
   * Social Media Platform **_e.g Instagram_**
   * Content Status **_e.g Editing_**
   * Projected Post Date **_e.g 05/09/2020_**
-  * Sponsors **_e.g Skill Share or None_**
+  * Sponsors **_connected to database below_**
 * Store contact details for content sponors (CREATE)
   * Company Name 
   * Primary Contact Name
@@ -78,9 +72,8 @@ The Application allows users to do the following :
   * Primary Contact Phone Number
   * Notes 
 * View all these inputs (READ)
-* Update existing Entries (UPDATE)
-* Delete entries (DELETE)
-* Delete account (DELETE)
+* Update existing sponsor entries (UPDATE)
+* Delete sponsor entries (DELETE)
 
 ### Risk Assessment 
 
