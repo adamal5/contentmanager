@@ -20,6 +20,7 @@ public class SponsorController {
         this.sponsorService = sponsorService;
     }
 
+
     @GetMapping("/sponsor")
     public ResponseEntity<List<SponsorDTO>> getAllSponsor(){
         return ResponseEntity.ok(this.sponsorService.readAllSponsor());

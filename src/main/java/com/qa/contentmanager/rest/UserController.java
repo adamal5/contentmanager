@@ -1,12 +1,6 @@
 package com.qa.contentmanager.rest;
 
-import com.qa.contentmanager.domain.User;
-import com.qa.contentmanager.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
+/*
 @RestController
 public class UserController {
 
@@ -46,4 +40,4 @@ public class UserController {
     }
 
 
-}
+}*/

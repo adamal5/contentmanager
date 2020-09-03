@@ -21,7 +21,7 @@ public class ContentController {
     }
 
     //specifically used for read functionality/ browsers only able to work with getmapping
-    @GetMapping("/")
+    @GetMapping("/content")
     public ResponseEntity<List<ContentDTO>> getAllContent() {
         return ResponseEntity.ok(this.contentService.readAllContent());
     }
