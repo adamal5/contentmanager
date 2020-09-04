@@ -32,6 +32,7 @@ public class ContentController {
         return new ResponseEntity<ContentDTO>(this.contentService.createContent(content), HttpStatus.CREATED);
     }
 
+
     //long name must be same as end of url e.g id here
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteContent(@PathVariable Long id){
