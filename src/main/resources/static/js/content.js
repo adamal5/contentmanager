@@ -15,18 +15,28 @@ function displayContent(){
                     // adding title to the body of the page
                     let elem = document.createElement('div');
                     let header = document.createElement('h1');
-                    let main = document.createElement("p")
+                    let contentType = document.createElement("p")
+                    let platform = document.createElement("p")
+                    let status = document.createElement("p")
+                    let postDate = document.createElement("p")
+                    let notes = document.createElement("p")
+
                     header.textContent = "Title: " + el.title;
-                    main.textContent = "Content Type: " +el.contentType;
-                   /* main.textContent = "Platform: " +el.platform;
-                    main.textContent = "Status: " +el.status;
-                    main.textContent = "Post Date: " +el.postDate;
-                    main.textContent = "Notes: " +el.notes;*/
+                    contentType.textContent = "Content Type: " +el.contentType;
+                    platform.textContent = "Platform: " +el.platform;
+                    status.textContent = "Status: " +el.status;
+                    postDate.textContent = "Post Date: " +el.postDate;
+                    notes.textContent = "Notes: " +el.notes;
 
                     elem.appendChild(header);
-                    elem.appendChild(main);
+                    elem.appendChild(contentType);
+                    elem.appendChild(platform);
+                    elem.appendChild(status);
+                    elem.appendChild(postDate);
+                    elem.appendChild(notes);
 
-                    el.content.forEach(sponsor => {
+
+                    el.sponsor.forEach(sponsor => {
                         console.log(sponsor) // print all notes for each notebook
                         let companyName = document.createElement('p');
 
@@ -36,7 +46,7 @@ function displayContent(){
                     })
                     document.body.appendChild(elem);
                 });
-            } else {
+            }  else {
                 console.log(
                     "Looks like its not JSON but lets see what it is... " + req.responseText
                 );
@@ -50,6 +60,7 @@ function displayContent(){
 }
 
 function submitContent(){
+    alert("running");
     let elements = document.getElementById("contentForm").elements;
     let obj ={};
     for(let i = 0 ; i < elements.length - 1 ; i++){
@@ -66,6 +77,7 @@ function submitContent(){
             console.log("Oops...");
         }
     };
+    alert(obj.title);
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     req.send(JSON.stringify({ title: obj.title, contentType: obj.contentType, platform: obj.platform, status: obj.status, postDate: obj.postDate, notes: obj.notes, sponsor:{ sponsorID: Number(obj.sponsorID)} }));
 }
