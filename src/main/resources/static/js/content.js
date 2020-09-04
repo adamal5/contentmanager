@@ -14,6 +14,7 @@ function displayContent(){
 
                     // adding title to the body of the page
                     let elem = document.createElement('div');
+                    elem.setAttribute("class", "container")
                     let header = document.createElement('h1');
                     let contentType = document.createElement("p")
                     let platform = document.createElement("p")
