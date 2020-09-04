@@ -17,16 +17,20 @@ function displaySponsors(){
 
                     // adding title to the body of the page
                     let elem = document.createElement('div');
+                    elem.setAttribute("class", "container")
                     let header = document.createElement('h1');
                     let primaryContactName = document.createElement("p")
                     let primaryContactEmail = document.createElement("p")
                     let primaryContactPhone = document.createElement("p")
                     let notes = document.createElement("p")
+
                     header.textContent = "Company Name: " + el.companyName;
                     primaryContactName.textContent = "Primary Contact Name: " +el.primaryContactName;
                     primaryContactEmail.textContent = "Primary Contact Email: " +el.primaryContactEmail;
                     primaryContactPhone.textContent = "Primary Contact Number: " +el.primaryContactPhone;
                     notes.textContent = "Notes: " +el.notes;
+
+
 
                     elem.appendChild(header);
                     elem.appendChild(primaryContactName);
@@ -34,11 +38,11 @@ function displaySponsors(){
                     elem.appendChild(primaryContactPhone);
                     elem.appendChild(notes);
 
+
                     el.content.forEach(content => {
                         console.log(content) // print all notes for each notebook
                         let title = document.createElement('p');
-                        let status = document.createElement('p');
-                        let postDate = document.createElement('p');
+
 
                         title.textContent = "Associated Content: " + content.title;
 
@@ -85,18 +89,20 @@ function submitSponsor(){
 
 //ATTEMPT AT UPDATE FUNCTION
 
-/*
-function updateSponsor(sponsorID) {
-    sponsorID.forEach( function( sponsor ) {
-        updateToSponsor( sponsor.companyName, sponsor.primaryContactName, sponsor.primaryContactEmail, sponsor.primaryContactPhone, sponsor.notes ); // update database
-    });
 
-    function updateToSponsor(companyName, primaryContactName, primaryContactEmail, primaryContactPhone, notes){
+function updateSponsor() {
 
+    let elements = document.getElementById("updateSponsorForm").elements;
+    let update ={};
+    for(let i = 0 ; i < elements.length - 1 ; i++){
+        let item = elements.item(i);
+        update [item.name] = item.value;
     }
 
+    const url = "http://localhost:8080/updateSponsor/" + update.sponsorID;
+
     const req = new XMLHttpRequest();
-    req.open("PUT", "http://localhost:8080/updateSponsor/{id}");
+    req.open("PUT", url);
     req.onload = () => {
         if (req.status === 200 && req.readyState == 4) {
             console.log("Server Responded with: " + req.responseText);
@@ -104,5 +110,34 @@ function updateSponsor(sponsorID) {
             console.log("Oops...");
         }
     };
+
+    req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    req.send(JSON.stringify({ companyName: update.companyName, primaryContactName: update.primaryContactName, primaryContactEmail: update.primaryContactEmail, primaryContactPhone: update.primaryContactPhone,notes: update.notes, content:{ contentID: Number(update.contentID)} }));
     
-}*/
+}
+
+function deleteSponsor(){
+
+    //const sponsorID = document.getElementById("sponsorID");
+
+    let elements = document.getElementById("deleteSponsorForm").elements;
+    let remove ={};
+    for(let i = 0 ; i < elements.length - 1 ; i++){
+        let item = elements.item(i);
+        remove [item.name] = item.value;
+    }
+
+    const urldelete = "http://localhost:8080/deleteSponsor/" +  remove.sponsorID;
+
+    const req = new XMLHttpRequest();
+    req.open("DELETE", urldelete);
+    req.onload = () => {
+        if (req.status === 200 && req.readyState == 4) {
+            console.log("Server Responded with: " + req.responseText);
+        } else {
+            console.log("Oops...");
+        }
+    };
+    req.send();
+
+}
