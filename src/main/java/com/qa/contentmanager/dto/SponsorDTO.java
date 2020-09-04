@@ -33,13 +33,9 @@ public class SponsorDTO {
         SponsorID = sponsorID;
     }
 
-    public String getCompanyName() {
-        return companyName;
-    }
+    public String getCompanyName() { return companyName; }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
+    public void setCompanyName(String companyName) { this.companyName = companyName; }
 
     public String getPrimaryContactName() {
         return primaryContactName;
