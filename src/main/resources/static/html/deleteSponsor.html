@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Delete Sponsors</title>
+    <script src="../js/sponsor.js"></script>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/cover.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">SMCM</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Content</a>
+                <a class="nav-link active" href="#">Sponsors</a>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <form id="deleteSponsorForm">
+
+            <h1>Delete Sponsor</h1>
+
+            <div class="form-group">
+                <label for="sponsorID">Sponsor ID</label>
+                <input type="text" class="form-control" id="sponsorID" name="sponsorID">
+            </div>
+
+            <button type="submit" onclick="deleteSponsor()" class="btn btn-primary">Submit</button>
+            <br/>
+        </form>
+
+    </div>
+    <br/>
+
+
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+        </div>
+    </footer>
+</div>
+</body>
+</html>
