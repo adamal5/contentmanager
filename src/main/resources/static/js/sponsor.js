@@ -118,9 +118,9 @@ function updateSponsor() {
 
 function deleteSponsor(){
 
-    //const sponsorID = document.getElementById("sponsorID");
+    /*const sponsorID = document.getElementById("sponsorID");*/
 
-    let elements = document.getElementById("deleteSponsorForm").elements;
+   let elements = document.getElementById("deleteSponsorForm").elements;
     let remove ={};
     for(let i = 0 ; i < elements.length - 1 ; i++){
         let item = elements.item(i);

@@ -44,7 +44,9 @@ function displayContent(){
                         companyName.textContent = "Sponsor: " + sponsor.companyName;
 
                         elem.appendChild(companyName);
+
                     })
+
                     document.body.appendChild(elem);
                 });
             }  else {
