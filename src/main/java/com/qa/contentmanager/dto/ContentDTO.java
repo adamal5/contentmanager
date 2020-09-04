@@ -1,5 +1,8 @@
 package com.qa.contentmanager.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ContentDTO {
 
 
@@ -10,11 +13,12 @@ public class ContentDTO {
     private String status;
     private String postDate;
     private String notes;
+    private List<SponsorDTO> sponsor = new ArrayList<>();
 
     public ContentDTO() {
     }
 
-    public ContentDTO(String title, String contentType, String platform, String status, String postDate, String sponsor, String notes) {
+    public ContentDTO(String title, String contentType, String platform, String status, String postDate, String notes) {
         super();
         this.title = title;
         this.contentType = contentType;
@@ -76,4 +80,11 @@ public class ContentDTO {
 
     public void setNotes(String notes) { this.notes = notes; }
 
+    public List<SponsorDTO> getSponsor() {
+        return sponsor;
+    }
+
+    public void setSponsor(List<SponsorDTO> sponsor) {
+        this.sponsor = sponsor;
+    }
 }
