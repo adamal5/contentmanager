@@ -18,15 +18,21 @@ function displaySponsors(){
                     // adding title to the body of the page
                     let elem = document.createElement('div');
                     let header = document.createElement('h1');
-                    let body = document.createElement("p")
+                    let primaryContactName = document.createElement("p")
+                    let primaryContactEmail = document.createElement("p")
+                    let primaryContactPhone = document.createElement("p")
+                    let notes = document.createElement("p")
                     header.textContent = "Company Name: " + el.companyName;
-                    body.textContent = "Primary Contact Name: " +el.primaryContactName;
-                    body.textContent = "Primary Contact Email: " +el.primaryContactEmail;
-                    body.textContent = "Primary Contact Number: " +el.primaryContactPhone;
-                    body.textContent = "Notes: " +el.notes;
+                    primaryContactName.textContent = "Primary Contact Name: " +el.primaryContactName;
+                    primaryContactEmail.textContent = "Primary Contact Email: " +el.primaryContactEmail;
+                    primaryContactPhone.textContent = "Primary Contact Number: " +el.primaryContactPhone;
+                    notes.textContent = "Notes: " +el.notes;
 
                     elem.appendChild(header);
-                    elem.appendChild(body);
+                    elem.appendChild(primaryContactName);
+                    elem.appendChild(primaryContactEmail);
+                    elem.appendChild(primaryContactPhone);
+                    elem.appendChild(notes);
 
                     el.content.forEach(content => {
                         console.log(content) // print all notes for each notebook
@@ -34,13 +40,11 @@ function displaySponsors(){
                         let status = document.createElement('p');
                         let postDate = document.createElement('p');
 
-                        title.textContent = "Title: " + content.title;
-                        status.textContent = "Status: " + content.status;
-                        postDate.textContent = "Post Date: " + content.postDate;
+                        title.textContent = "Associated Content: " + content.title;
+
 
                         elem.appendChild(title);
-                        elem.appendChild(status);
-                        elem.appendChild(postDate)
+
                     })
                     document.body.appendChild(elem);
                 });
@@ -74,6 +78,7 @@ function submitSponsor(){
             console.log("Oops...");
         }
     };
+    alert(obj.companyName);
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     req.send(JSON.stringify({ companyName: obj.companyName, primaryContactName: obj.primaryContactName, primaryContactEmail: obj.primaryContactEmail, primaryContactPhone: obj.primaryContactPhone,notes: obj.notes, content:{ contentID: Number(obj.contentID)} }));
 }
