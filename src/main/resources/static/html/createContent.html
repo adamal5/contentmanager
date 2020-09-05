@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>New Content</title>
+      <script src="../js/content.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/cover.css" rel="stylesheet">
+
+  </head>
+
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">SMCM</h3>
+      <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link" href="http://localhost:8080/html/homePage.html?">Home</a>
+          <a class="nav-link" href="http://localhost:8080/html/content.html?">Content</a>
+          <a class="nav-link" href="http://localhost:8080/html/sponsor.html?">Sponsors</a>
+
+      </nav>
+    </div>
+  </header>
+
+
+   <div class="container">
+    <form id="contentForm">
+
+      <h1>New Content</h1> 
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title">
+    </div> 
+
+    <div class="form-group">
+      <label for="contentType">Content Type</label>
+      <select type="text" class="form-control" id="contentType" name="contentType">
+          <option selected>Select...</option>
+        <option>Image</option>
+        <option>Video</option>
+        <option>Podcast</option>
+        <option>Infographic</option>
+        <option>Blog Post</option>
+        <option>Text Only</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="platform">Platform</label>
+      <select type="text" class="form-control" id="platform" name="platform">
+          <option selected>Select...</option>
+        <option>Instagram</option>
+        <option>Twitter</option>
+        <option>Pintrest</option>
+        <option>YouTube</option>
+        <option>Snapchat</option>
+        <option>Facebook</option>
+        <option>Apple Podcast</option>
+        <option>Spotify</option>
+        <option>LinkedIn</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select type="text" class="form-control" id="status" name="status">
+          <option selected>Select...</option>
+        <option>Idea</option>
+        <option>Drafting</option>
+        <option>Editing</option>
+        <option>Ready to Post</option>
+        <option>Posted</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="postDate">Post Date</label>
+        <input type="date" class="form-control" id="postDate" name="postDate">
+    </div>
+
+    <div class="form-group">
+      <label for="sponsorID">Sponsor ID</label>
+      <input type="text" class="form-control" id="sponsorID" name="sponsorID">
+  </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea type="text" class="form-control" id="notes" name="notes" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" onclick="submitContent()">Submit</button>
+    <br/>
+    </form>
+
+    </div>
+  <br/>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+    </div>
+  </footer>
+</div>
+</body>
+</html>

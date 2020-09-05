@@ -118,16 +118,16 @@ function updateSponsor() {
 
 function deleteSponsor(){
 
-    /*const sponsorID = document.getElementById("sponsorID");*/
+    const sponsorID = document.getElementById("sponsorID");
 
-   let elements = document.getElementById("deleteSponsorForm").elements;
+   /*let elements = document.getElementById("deleteSponsorForm").elements;
     let remove ={};
     for(let i = 0 ; i < elements.length - 1 ; i++){
         let item = elements.item(i);
         remove [item.name] = item.value;
-    }
+    }*/
 
-    const urldelete = "http://localhost:8080/deleteSponsor/" +  remove.sponsorID;
+    let urldelete = "http://localhost:8080/deleteSponsor/"+remove.sponsorID;
 
     const req = new XMLHttpRequest();
     req.open("DELETE", urldelete);
@@ -139,5 +139,4 @@ function deleteSponsor(){
         }
     };
     req.send();
-
 }
