@@ -83,7 +83,7 @@ https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OSshmogoGkOOSU5_KN_
 
 A quick overview is as follows:
 
-![risk-assessment][riskAssessment]
+![risk-assessment](riskAssessment.jpeg)
 
 
 ### Project Tracking 
@@ -93,6 +93,9 @@ A quick overview is as follows:
 ### Testing 
 
 ### Front End Design 
+Given the time constraint and technical knowledge level the front end is relatively basic at this stage but allows for CRUD fucntionality. It was designed using html and CSS. 
+
+![front-end](frontEndDesign.JPG)
 
 ### Issues
 
