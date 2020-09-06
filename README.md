@@ -76,6 +76,15 @@ The Application allows users to do the following :
 * Delete sponsor entries (DELETE)
 
 ### Risk Assessment 
+A full risk assessment was carried out before project commencenment and was monitored throughout. It includes mitigation at present but additionally, proposed mitigation in the event of more time and resources. The assessment includes risks associated with developer and technologies employed. 
+
+The risk assessment for this project can be found in full here:
+https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OSshmogoGkOOSU5_KN_VTw/edit#gid=0
+
+A quick overview is as follows:
+
+![risk-assessment][riskAssessment]
+
 
 ### Project Tracking 
 
