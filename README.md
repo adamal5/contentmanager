@@ -98,10 +98,17 @@ Below is a screen shot of a sprint:
 ### Architecture
 
 **Circle CI**
-Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. 
+Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. The workflow is designed to allow testing and deployment of the app via a VM possible independent of the developers local machine.
 
 The workflow itself has two primary steps, test and deploy.
-1. Test: 
+* Test: 
+  * 
+* Deploy:
+  * Spin Up Environment: VIrtual machine used to deploy application is initiated
+  * Preparing Environmental Variables: A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
+  * Install Java & Maven: The necessary programs used to build the application are installed, this also included git which is sometimes not present.
+  * Clone Repo & Install Application Dependancies: This step clones the repository (with all pushed commits to date) and installs the necessary dependencies associted with the pom.xml file. 
+  * Deploy Application: Given all the previous steps have been successful the application will successfully deploy and the Circle CI pipeline will time out after approximately 10 miniutes. 
 
 ![circle-ci](circleCI2.jpeg)
 
