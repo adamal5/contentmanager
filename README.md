@@ -103,6 +103,17 @@ Given the time constraint and technical knowledge level the front end is relativ
 ### Issues
 
 ### Future Improvements 
-1. Sign in page as a dashboard with key statistics for content creators to track volume of content per platform, and content type. Additionally, can view proportion of sponsored vs non-sponsored posts
-2. Conditional drop down meanu when inputting content e.g if Instagram platform selected then default content type options = image, video, story, reel
+
+**Process Streamlining**
+1. The sponsor update form should be automatically populated with the data associated with that sponsor id instead of users having to re-input all values and potentially make a mistake. 
+2. Delete button automatically deletes the desired content rather than directing user to another page for manual input of the id. 
+3. Conditional drop down meanu when inputting content e.g if Instagram platform selected then default content type options = image, video, story, reel
+
+**Security**
+1. Implement the user login feature so that multiple users can use the application and only have access to their content and sponsor details.
+2. Encrypt information sent via html 
+
+**User Display/ Design Features**
+1. Sign in page as a dashboard with key statistics for content creators to track volume of content per platform, and content type. The use of pre-defined options in the forms is intended to ease the implmentation of this at a later stage. 
+2. General overhaul of aesthetic component of application- images and formatting. 
 
