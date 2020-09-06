@@ -99,7 +99,7 @@ Below is a screen shot of a sprint:
 **Database Structure**
 This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application emplys relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
 
-![Entity-Relationship-Diagram]()
+![Entity-Relationship-Diagram](ERD.JPG)
 
 **Circle CI**
 
