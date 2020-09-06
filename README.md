@@ -93,6 +93,9 @@ Jira's Kanban board was employed to track project progress, in line with agile w
 
 ### Architecture
 
+**Circle CI**
+![circle-ci](circleCI2.JPG)
+
 ### Testing 
 
 ### Front End Design 
