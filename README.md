@@ -87,14 +87,23 @@ A quick overview is as follows:
 
 
 ### Project Tracking 
-Jira's Kanban board was employed to track project progress, in line with agile working principles. The full board with all sprints and users stories can be found at the following link:
+Jira's Kanban board was employed to track project progress, in line with agile working principles. THe kanban board allowed for project planning guided by user stories to ensure all work woulf fulfil the needs of the end user. Epics were used to further organise and group tasks.
 
+The full board with all sprints and users stories can be found at the following link:
+https://ak21.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=SMCM&selectedIssue=SMCM-26
+
+Below is a screen shot of a sprint:
 ![kanban-board](jira.jpeg)
 
 ### Architecture
 
 **Circle CI**
-![circle-ci](circleCI2.JPG)
+Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. 
+
+The workflow itself has two primary steps, test and deploy.
+1. Test: 
+
+![circle-ci](circleCI2.jpeg)
 
 ### Testing 
 
