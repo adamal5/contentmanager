@@ -53,7 +53,7 @@ Create a CRUD application that demonstrates an understanding of key concepts, to
 ### Application Overview:
 **Description:**
 
-This application is designed to allow users to store manage their social media content posts through idea phase to successful post.
+This application is designed to allow users to log details of social media content sponsors and the content itselef.
 
 **Functionality:**
 
