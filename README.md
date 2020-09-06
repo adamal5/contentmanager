@@ -152,7 +152,9 @@ No known issues or bugs that affect application functionality.
 ### Resources 
 
 Website: http://35.197.234.90:8080/html/homePage.html
+
 Jira Kanban Board: https://ak21.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=SMCM&selectedIssue=SMCM-26
+
 Risk Assessment: https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OSshmogoGkOOSU5_KN_VTw/edit#gid=0
 
 ### Acknowledgements
