@@ -102,13 +102,15 @@ Circle CI was the continous integration platform of choice. The corresponding ya
 
 The workflow itself has two primary steps, test and deploy.
 * Test: 
-  * 
+  * **Spin Up Environment:** VIrtual machine used to deploy application is initiated
+  * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
 * Deploy:
-  * Spin Up Environment: VIrtual machine used to deploy application is initiated
-  * Preparing Environmental Variables: A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
-  * Install Java & Maven: The necessary programs used to build the application are installed, this also included git which is sometimes not present.
-  * Clone Repo & Install Application Dependancies: This step clones the repository (with all pushed commits to date) and installs the necessary dependencies associted with the pom.xml file. 
-  * Deploy Application: Given all the previous steps have been successful the application will successfully deploy and the Circle CI pipeline will time out after approximately 10 miniutes. 
+  * 
+* **Spin Up Environment:** Virtual machine used to deploy application is initiated
+  * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
+  * **Install Java & Maven:** The necessary programs used to build the application are installed, this also included git which is sometimes not present.
+  * **Clone Repo & Install Application Dependancies:** This step clones the repository (with all pushed commits to date) and installs the necessary dependencies associted with the pom.xml file. 
+  * **Deploy Application:** Given all the previous steps have been successful the application will successfully deploy and the Circle CI pipeline will time out after approximately 10 miniutes. 
 
 ![circle-ci](circleCI2.jpeg)
 
