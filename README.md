@@ -101,9 +101,11 @@ Below is a screen shot of a sprint:
 
 ### Architecture
 **Database Structure**
-This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application emplys relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
+This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application employs relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
 
 ![Entity-Relationship-Diagram](ERD.JPG)
+
+GCP MySQL is used to persistently store the data (entities) associated with the application. 
 
 **Circle CI**
 
@@ -124,7 +126,7 @@ The workflow itself has two primary steps, test and deploy. Activities associate
 ![circle-ci](circleCI2.jpeg)
 
 ### Testing 
-Inability to conduct J Unit tests as a result of group wide time constraints. Multiple test have been run manually to test application functionality but it is possible that non-fatal bugs exist that have not been spotted 
+Inability to conduct J Unit tests as a result of group wide time constraints. Multiple test have been run manually to test application functionality but it is possible that non-fatal bugs exist that have not been spotted.
 
 ### Front End Design 
 Given the time constraint and technical knowledge level the front end is relatively basic at this stage but allows for CRUD fucntionality. It was designed using html and CSS. 
@@ -159,7 +161,7 @@ Risk Assessment: https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OS
 
 ### Acknowledgements
 
-A special thank my trainers Tadas Vaidotas and Jay Grindrod for their continued guidance and support during the development of this application. 
+A special thank you to my trainers Tadas Vaidotas and Jay Grindrod for their continued guidance and support during the development of this application. 
 
 ### Licensing 
 
