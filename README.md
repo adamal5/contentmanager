@@ -91,7 +91,7 @@ A quick overview is as follows:
 
 
 ### Project Tracking 
-Jira's Kanban board was employed to track project progress, in line with agile working principles. THe kanban board allowed for project planning guided by user stories to ensure all work woulf fulfil the needs of the end user. Epics were used to further organise and group tasks. Given the length of time spent bulding the application 2-3 weeks I opted for a single spring and employed epics to categorise work into back end, front end, database and planning. In the future I will employ multiple sprints a seperate the work out into shorter more focused periods.  
+Jira's Kanban board was employed to track project progress, in line with agile working principles. The kanban board allowed for project planning guided by user stories to ensure all work would fulfil the needs of the end user. Epics were used to further organise and group tasks. Given the length of time spent bulding the application 2-3 weeks I opted for a single sprint and employed epics to categorise work into back end, front end, database and planning. In the future I will employ multiple sprints and seperate the work out into shorter more focused periods.  
 
 The full board with all tasks and user stories can be found at the following link:
 https://ak21.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=SMCM&selectedIssue=SMCM-26
