@@ -87,6 +87,9 @@ A quick overview is as follows:
 
 
 ### Project Tracking 
+Jira's Kanban board was employed to track project progress, in line with agile working principles. The full board with all sprints and users stories can be found at the following link:
+
+![kanban-board](jira.jpeg)
 
 ### Architecture
 
