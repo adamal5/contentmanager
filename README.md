@@ -96,9 +96,14 @@ Below is a screen shot of a sprint:
 ![kanban-board](jira.jpeg)
 
 ### Architecture
+**Database Structure**
+This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application emplys relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
+
+![Entity-Relationship-Diagram]()
 
 **Circle CI**
-Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. The workflow is designed to allow testing and deployment of the app via a VM possible independent of the developers local machine.
+
+Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. The workflow is designed to allow testing and deployment of the app via a VM  independent of the developers local machine by setting up environmental variables, installing necessary programs and dependencies as well as cloning the repo that houses the application.
 
 The workflow itself has two primary steps, test and deploy. Activities associated with deployment are only triggered if the test job has been successful. 
 * Test: 
