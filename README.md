@@ -100,7 +100,7 @@ Below is a screen shot of a sprint:
 **Circle CI**
 Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. The workflow is designed to allow testing and deployment of the app via a VM possible independent of the developers local machine.
 
-The workflow itself has two primary steps, test and deploy.
+The workflow itself has two primary steps, test and deploy. Activities associated with deployment are only triggered if the test job has been successful. 
 * Test: 
   * **Spin Up Environment:** VIrtual machine used to deploy application is initiated
   * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
@@ -115,6 +115,7 @@ The workflow itself has two primary steps, test and deploy.
 ![circle-ci](circleCI2.jpeg)
 
 ### Testing 
+Inability to conduct J Unit tests as a result of group wide time constraints. Multiple test have been run manually to test application functionality but it is possible that non-fatal bugs exist that have not been spotted 
 
 ### Front End Design 
 Given the time constraint and technical knowledge level the front end is relatively basic at this stage but allows for CRUD fucntionality. It was designed using html and CSS. 
@@ -122,6 +123,7 @@ Given the time constraint and technical knowledge level the front end is relativ
 ![front-end](frontEndDesign.JPG)
 
 ### Issues
+No known issues or bugs that affect application functionality.
 
 ### Future Improvements 
 
