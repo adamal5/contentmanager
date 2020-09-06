@@ -141,7 +141,7 @@ No known issues or bugs that affect application functionality.
 **Process Streamlining**
 1. The sponsor update form should be automatically populated with the data associated with that sponsor id instead of users having to re-input all values and potentially make a mistake. 
 2. Delete button automatically deletes the desired content rather than directing user to another page for manual input of the id. 
-3. Conditional drop down meanu when inputting content e.g if Instagram platform selected then default content type options = image, video, story, reel
+3. Conditional drop down menu when inputting content e.g if Instagram platform selected then default content type options = image, video, story, reel
 
 **Security**
 1. Implement the user login feature so that multiple users can use the application and only have access to their content and sponsor details.
