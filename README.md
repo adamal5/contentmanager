@@ -117,7 +117,7 @@ The workflow itself has two primary steps, test and deploy. Activities associate
   * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
 * Deploy:
    
-* **Spin Up Environment:** Virtual machine used to deploy application is initiated
+  * **Spin Up Environment:** Virtual machine used to deploy application is initiated
   * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
   * **Install Java & Maven:** The necessary programs used to build the application are installed, this also included git which is sometimes not present.
   * **Clone Repo & Install Application Dependancies:** This step clones the repository (with all pushed commits to date) and installs the necessary dependencies associted with the pom.xml file. 
