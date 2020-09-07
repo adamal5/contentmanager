@@ -87,13 +87,35 @@ A quick overview is as follows:
 
 
 ### Project Tracking 
-Jira's Kanban board was employed to track project progress, in line with agile working principles. The full board with all sprints and users stories can be found at the following link:
+Jira's Kanban board was employed to track project progress, in line with agile working principles. THe kanban board allowed for project planning guided by user stories to ensure all work woulf fulfil the needs of the end user. Epics were used to further organise and group tasks.
 
+The full board with all sprints and users stories can be found at the following link:
+https://ak21.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=SMCM&selectedIssue=SMCM-26
+
+Below is a screen shot of a sprint:
 ![kanban-board](jira.jpeg)
 
 ### Architecture
 
+**Circle CI**
+Circle CI was the continous integration platform of choice. The corresponding yaml file was designed to allow for automatic testing and deployment of the application via the GCP virtual machine. Circle CI improves the effciency of the development to deployment pipeline. The server can be initiated by making a simple change to the corresponding yaml file. The workflow is designed to allow testing and deployment of the app via a VM possible independent of the developers local machine.
+
+The workflow itself has two primary steps, test and deploy. Activities associated with deployment are only triggered if the test job has been successful. 
+* Test: 
+  * **Spin Up Environment:** VIrtual machine used to deploy application is initiated
+  * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
+* Deploy:
+  * 
+* **Spin Up Environment:** Virtual machine used to deploy application is initiated
+  * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
+  * **Install Java & Maven:** The necessary programs used to build the application are installed, this also included git which is sometimes not present.
+  * **Clone Repo & Install Application Dependancies:** This step clones the repository (with all pushed commits to date) and installs the necessary dependencies associted with the pom.xml file. 
+  * **Deploy Application:** Given all the previous steps have been successful the application will successfully deploy and the Circle CI pipeline will time out after approximately 10 miniutes. 
+
+![circle-ci](circleCI2.jpeg)
+
 ### Testing 
+Inability to conduct J Unit tests as a result of group wide time constraints. Multiple test have been run manually to test application functionality but it is possible that non-fatal bugs exist that have not been spotted 
 
 ### Front End Design 
 Given the time constraint and technical knowledge level the front end is relatively basic at this stage but allows for CRUD fucntionality. It was designed using html and CSS. 
@@ -101,6 +123,7 @@ Given the time constraint and technical knowledge level the front end is relativ
 ![front-end](frontEndDesign.JPG)
 
 ### Issues
+No known issues or bugs that affect application functionality.
 
 ### Future Improvements 
 
