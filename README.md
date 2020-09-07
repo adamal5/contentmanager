@@ -18,6 +18,10 @@
 * Front End Design
 * Issues
 * Improvements
+* Resources
+* Acknowledgements
+* Licences
+* Authors
 
 ### Project Brief
 **Objective:** 
@@ -99,7 +103,7 @@ Below is a screen shot of a sprint:
 **Database Structure**
 This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application emplys relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
 
-![Entity-Relationship-Diagram]()
+![Entity-Relationship-Diagram](ERD.JPG)
 
 **Circle CI**
 
@@ -145,3 +149,19 @@ No known issues or bugs that affect application functionality.
 1. Sign in page as a dashboard with key statistics for content creators to track volume of content per platform, and content type. The use of pre-defined options in the forms is intended to ease the implmentation of this at a later stage. 
 2. General overhaul of aesthetic component of application- images and formatting. 
 
+### Resources 
+
+Website: http://35.197.234.90:8080/html/homePage.html
+
+Jira Kanban Board: https://ak21.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=SMCM&selectedIssue=SMCM-26
+
+Risk Assessment: https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OSshmogoGkOOSU5_KN_VTw/edit#gid=0
+
+### Acknowledgements
+
+A special thank my trainers Tadas Vaidotas and Jay Grindrod for their continued guidance and support during the development of this application. 
+
+### Licensing 
+
+### Authors
+Adama Kabba
