@@ -33,7 +33,7 @@ public class Content {
     public Content() {
     }
 
-    public Content(String title, String contentType, String platform, String status, String postDate, String sponsor, String notes) {
+    public Content(String title, String contentType, String platform, String status, String postDate, String notes) {
         this.title = title;
         this.contentType = contentType;
         this.platform = platform;
