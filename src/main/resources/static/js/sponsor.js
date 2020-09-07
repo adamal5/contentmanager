@@ -37,6 +37,7 @@ function displaySponsors(){
 
 
 
+
                     header.textContent = "Company Name: " + el.companyName;
                     primaryContactName.textContent = "Primary Contact Name: " +el.primaryContactName;
                     primaryContactEmail.textContent = "Primary Contact Email: " +el.primaryContactEmail;
@@ -62,11 +63,13 @@ function displaySponsors(){
                         console.log(content) // print all notes for each notebook
                         let title = document.createElement('p');
                         title.style.fontWeight = 'bold';
+                        let gap= document.createElement("br");
 
 
                         title.textContent = "Associated Content: " + content.title;
 
 
+                        elem.appendChild(gap);
                         elem.appendChild(title);
 
                     })
@@ -136,9 +139,10 @@ function updateSponsor() {
     
 }
 
+
+
+
 function deleteSponsor(){
-
-
 
    let elements = document.getElementById("deleteSponsorForm").elements;
     let remove ={};
@@ -160,3 +164,6 @@ function deleteSponsor(){
     };
     req.send();
 }
+
+// delete function 2.0
+

@@ -17,11 +17,12 @@ function displayContent(){
                     elem.setAttribute("class", "container")
                     let header = document.createElement('h3');
 
-                    let contentType = document.createElement("p")
-                    let platform = document.createElement("p")
-                    let status = document.createElement("p")
-                    let postDate = document.createElement("p")
-                    let notes = document.createElement("p")
+                    let contentType = document.createElement("p");
+                    let platform = document.createElement("p");
+                    let status = document.createElement("p");
+                    let postDate = document.createElement("p");
+                    let notes = document.createElement("p");
+                    let contentID = document.createElement("p");
 
                     header.textContent = "Title: " + el.title;
                     contentType.textContent = "Content Type: " +el.contentType;
@@ -29,8 +30,11 @@ function displayContent(){
                     status.textContent = "Status: " +el.status;
                     postDate.textContent = "Post Date: " +el.postDate;
                     notes.textContent = "Notes: " +el.notes;
+                    contentID.textContent ="Content ID: " +el.contentID;
+
 
                     elem.appendChild(header);
+                    elem.appendChild(contentID);
                     elem.appendChild(contentType);
                     elem.appendChild(platform);
                     elem.appendChild(status);
