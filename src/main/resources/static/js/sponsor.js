@@ -28,12 +28,12 @@ function displaySponsors(){
                     //add update button
                     let updateButton=document.createElement("button")
                     updateButton.setAttribute("class", "btn btn-lg btn-secondary")
-                    updateButton.onclick = function(){location.href = "http://localhost:8080/html/updateSponsor.html"};
+                    updateButton.onclick = function(){location.href = "http://35.197.234.90:8080/html/updateSponsor.html"};
 
                     //add delete button
                     let deleteButton=document.createElement("button")
                     deleteButton.setAttribute("class", "btn btn-lg btn-secondary")
-                    deleteButton.onclick = function(){location.href = "http://localhost:8080/html/deleteSponsor.html"};
+                    deleteButton.onclick = function(){location.href = "http://35.197.234.90:8080/html/deleteSponsor.html"};
 
 
 
@@ -84,7 +84,7 @@ function displaySponsors(){
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://localhost:8080/sponsor");
+    req.open("GET", "http://35.197.234.90:8080/sponsor");
     req.send();
 }
 
@@ -97,7 +97,7 @@ function submitSponsor(){
     }
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8080/createSponsor");
+    req.open("POST", "http://35.197.234.90:8080/createSponsor");
     req.onload = () => {
         if (req.status === 200 && req.readyState == 4) {
             console.log("Server Responded with: " + req.responseText);
@@ -122,7 +122,7 @@ function updateSponsor() {
         update [item.name] = item.value;
     }
 
-    const url = "http://localhost:8080/updateSponsor/" + update.sponsorID;
+    const url = "http://35.197.234.90:8080/updateSponsor/" + update.sponsorID;
 
     const req = new XMLHttpRequest();
     req.open("PUT", url);
@@ -151,7 +151,7 @@ function deleteSponsor(){
         remove [item.name] = item.value;
     }
 
-    let urldelete = "http://localhost:8080/deleteSponsor/"+remove.sponsorID;
+    let urldelete = "http://35.197.234.90:8080/deleteSponsor/"+remove.sponsorID;
 
     const req = new XMLHttpRequest();
     req.open("DELETE", urldelete);
