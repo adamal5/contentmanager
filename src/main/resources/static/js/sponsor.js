@@ -17,31 +17,51 @@ function displaySponsors(){
 
                     // adding title to the body of the page
                     let elem = document.createElement('div');
-                    elem.setAttribute("class", "container")
-                    let header = document.createElement('h1');
-                    let primaryContactName = document.createElement("p")
-                    let primaryContactEmail = document.createElement("p")
-                    let primaryContactPhone = document.createElement("p")
-                    let notes = document.createElement("p")
+                    elem.setAttribute("class", "container");
+                    let header = document.createElement('h3');
+                    let primaryContactName = document.createElement("p");
+                    let primaryContactEmail = document.createElement("p");
+                    let primaryContactPhone = document.createElement("p");
+                    let notes = document.createElement("p");
+                    let sponsorID = document.createElement("p");
+
+                    //add update button
+                    let updateButton=document.createElement("button")
+                    updateButton.setAttribute("class", "btn btn-lg btn-secondary")
+                    updateButton.onclick = function(){location.href = "http://localhost:8080/html/updateSponsor.html"};
+
+                    //add delete button
+                    let deleteButton=document.createElement("button")
+                    deleteButton.setAttribute("class", "btn btn-lg btn-secondary")
+                    deleteButton.onclick = function(){location.href = "http://localhost:8080/html/deleteSponsor.html"};
+
+
 
                     header.textContent = "Company Name: " + el.companyName;
                     primaryContactName.textContent = "Primary Contact Name: " +el.primaryContactName;
                     primaryContactEmail.textContent = "Primary Contact Email: " +el.primaryContactEmail;
                     primaryContactPhone.textContent = "Primary Contact Number: " +el.primaryContactPhone;
                     notes.textContent = "Notes: " +el.notes;
+                    sponsorID.textContent = "Sponsor ID: " +el.sponsorID;
+                    updateButton.innerHTML = "Update";
+                    deleteButton.innerHTML = "Delete";
 
 
 
                     elem.appendChild(header);
+                    elem.appendChild(sponsorID);
                     elem.appendChild(primaryContactName);
                     elem.appendChild(primaryContactEmail);
                     elem.appendChild(primaryContactPhone);
                     elem.appendChild(notes);
+                    elem.appendChild(updateButton);
+                    elem.appendChild(deleteButton);
 
 
                     el.content.forEach(content => {
                         console.log(content) // print all notes for each notebook
                         let title = document.createElement('p');
+                        title.style.fontWeight = 'bold';
 
 
                         title.textContent = "Associated Content: " + content.title;
@@ -61,7 +81,7 @@ function displaySponsors(){
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://35.246.79.253:8080/sponsor");
+    req.open("GET", "http://localhost:8080/sponsor");
     req.send();
 }
 
@@ -74,7 +94,7 @@ function submitSponsor(){
     }
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://35.246.79.253:8080/createSponsor");
+    req.open("POST", "http://localhost:8080/createSponsor");
     req.onload = () => {
         if (req.status === 200 && req.readyState == 4) {
             console.log("Server Responded with: " + req.responseText);
@@ -99,7 +119,7 @@ function updateSponsor() {
         update [item.name] = item.value;
     }
 
-    const url = "http://35.246.79.253:8080/updateSponsor/" + update.sponsorID;
+    const url = "http://localhost:8080/updateSponsor/" + update.sponsorID;
 
     const req = new XMLHttpRequest();
     req.open("PUT", url);
@@ -118,16 +138,16 @@ function updateSponsor() {
 
 function deleteSponsor(){
 
-    const sponsorID = document.getElementById("sponsorID");
 
-   /*let elements = document.getElementById("deleteSponsorForm").elements;
+
+   let elements = document.getElementById("deleteSponsorForm").elements;
     let remove ={};
     for(let i = 0 ; i < elements.length - 1 ; i++){
         let item = elements.item(i);
         remove [item.name] = item.value;
-    }*/
+    }
 
-    let urldelete = "http://35.246.79.253:8080/deleteSponsor/"+remove.sponsorID;
+    let urldelete = "http://localhost:8080/deleteSponsor/"+remove.sponsorID;
 
     const req = new XMLHttpRequest();
     req.open("DELETE", urldelete);

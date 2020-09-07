@@ -15,7 +15,8 @@ function displayContent(){
                     // adding title to the body of the page
                     let elem = document.createElement('div');
                     elem.setAttribute("class", "container")
-                    let header = document.createElement('h1');
+                    let header = document.createElement('h3');
+
                     let contentType = document.createElement("p")
                     let platform = document.createElement("p")
                     let status = document.createElement("p")
@@ -58,7 +59,7 @@ function displayContent(){
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://35.246.79.253:8080/content");
+    req.open("GET", "http://localhost:8080/content");
     req.send();
 }
 
@@ -72,7 +73,7 @@ function submitContent(){
     }
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://35.246.79.253:8080/createContent");
+    req.open("POST", "http://localhost:8080/createContent");
     req.onload = () => {
         if (req.status === 200 && req.readyState == 4) {
             console.log("Server Responded with: " + req.responseText);
