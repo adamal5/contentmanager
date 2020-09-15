@@ -91,19 +91,21 @@ A quick overview is as follows:
 
 
 ### Project Tracking 
-Jira's Kanban board was employed to track project progress, in line with agile working principles. THe kanban board allowed for project planning guided by user stories to ensure all work woulf fulfil the needs of the end user. Epics were used to further organise and group tasks.
+Jira's Kanban board was employed to track project progress, in line with agile working principles. The kanban board allowed for project planning guided by user stories to ensure all work would fulfil the needs of the end user. Epics were used to further organise and group tasks. Given the length of time spent bulding the application 2-3 weeks I opted for a single sprint and employed epics to categorise work into back end, front end, database and planning. In the future I will employ multiple sprints and seperate the work out into shorter more focused periods.  
 
-The full board with all sprints and users stories can be found at the following link:
+The full board with all tasks and user stories can be found at the following link:
 https://ak21.atlassian.net/secure/RapidBoard.jspa?rapidView=3&projectKey=SMCM&selectedIssue=SMCM-26
 
-Below is a screen shot of a sprint:
+Below is a screen shot of the sprint:
 ![kanban-board](jira.jpeg)
 
 ### Architecture
 **Database Structure**
-This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application emplys relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
+This application has two databases, one that stores information on sponsors and the other that stores information on the content itself. This application employs relational databases as two are connected via a one to many and many to one relationship as illlustrated in the Entity Relationship Diagram below:
 
 ![Entity-Relationship-Diagram](ERD.JPG)
+
+GCP MySQL is used to persistently store the data (entities) associated with the application. 
 
 **Circle CI**
 
@@ -111,11 +113,11 @@ Circle CI was the continous integration platform of choice. The corresponding ya
 
 The workflow itself has two primary steps, test and deploy. Activities associated with deployment are only triggered if the test job has been successful. 
 * Test: 
-  * **Spin Up Environment:** VIrtual machine used to deploy application is initiated
+  * **Spin Up Environment:** Virtual machine used to deploy application is initiated
   * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
 * Deploy:
-  * 
-* **Spin Up Environment:** Virtual machine used to deploy application is initiated
+   
+  * **Spin Up Environment:** Virtual machine used to deploy application is initiated
   * **Preparing Environmental Variables:** A series of CI variables are prepared and the manual changes to project setting including establishing a SSH Host and User that match the GCP virtual machine are initiated. 
   * **Install Java & Maven:** The necessary programs used to build the application are installed, this also included git which is sometimes not present.
   * **Clone Repo & Install Application Dependancies:** This step clones the repository (with all pushed commits to date) and installs the necessary dependencies associted with the pom.xml file. 
@@ -124,7 +126,7 @@ The workflow itself has two primary steps, test and deploy. Activities associate
 ![circle-ci](circleCI2.jpeg)
 
 ### Testing 
-Inability to conduct J Unit tests as a result of group wide time constraints. Multiple test have been run manually to test application functionality but it is possible that non-fatal bugs exist that have not been spotted 
+Inability to conduct J Unit tests as a result of group wide time constraints. Multiple trials have been run manually to test application functionality but it is possible that non-fatal bugs exist that have not been spotted.
 
 ### Front End Design 
 Given the time constraint and technical knowledge level the front end is relatively basic at this stage but allows for CRUD fucntionality. It was designed using html and CSS. 
@@ -139,14 +141,14 @@ No known issues or bugs that affect application functionality.
 **Process Streamlining**
 1. The sponsor update form should be automatically populated with the data associated with that sponsor id instead of users having to re-input all values and potentially make a mistake. 
 2. Delete button automatically deletes the desired content rather than directing user to another page for manual input of the id. 
-3. Conditional drop down meanu when inputting content e.g if Instagram platform selected then default content type options = image, video, story, reel
+3. Conditional drop down menu when inputting content e.g if Instagram platform selected then default content type options = image, video, story, reel
 
 **Security**
 1. Implement the user login feature so that multiple users can use the application and only have access to their content and sponsor details.
 2. Encrypt information sent via html 
 
 **User Display/ Design Features**
-1. Sign in page as a dashboard with key statistics for content creators to track volume of content per platform, and content type. The use of pre-defined options in the forms is intended to ease the implmentation of this at a later stage. 
+1. Sign in page as a dashboard with key statistics for content creators to track volume of content per platform, and content type. The use of pre-defined options in the forms is intended to ease the implementation of this at a later stage. 
 2. General overhaul of aesthetic component of application- images and formatting. 
 
 ### Resources 
@@ -159,9 +161,7 @@ Risk Assessment: https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OS
 
 ### Acknowledgements
 
-A special thank my trainers Tadas Vaidotas and Jay Grindrod for their continued guidance and support during the development of this application. 
-
-### Licensing 
+A special thank you to my trainers Tadas Vaidotas and Jay Grindrod for their continued guidance and support during the development of this application. 
 
 ### Authors
 Adama Kabba
