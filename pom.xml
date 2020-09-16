@@ -11,6 +11,7 @@
     <groupId>com.qa</groupId>
     <artifactId>contentmanager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>contentmanager</name>
     <description>Social Media Content Managaer</description>
 
