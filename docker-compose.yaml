@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   cm-app:
-    image: cm-app
+    image: adamal5/cm-app
     build: ./
     ports:
     - target: 8080
