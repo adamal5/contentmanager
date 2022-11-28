@@ -164,4 +164,4 @@ Risk Assessment: https://docs.google.com/spreadsheets/d/1NaXPK0vTBx11zCeguTTU5OS
 A special thank you to my trainers Tadas Vaidotas and Jay Grindrod for their continued guidance and support during the development of this application. 
 
 ### Authors
-Adama Kabba
+Adama 
